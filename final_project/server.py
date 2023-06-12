@@ -1,6 +1,8 @@
 from machinetranslation import translator
 from flask import Flask, render_template, request
 import json
+from jinja2 import Markup
+
 
 app = Flask("Web Translator")
 
@@ -17,7 +19,7 @@ def frenchToEnglish():
 
 @app.route("/")
 def renderIndexPage():
-    render_template("index_html")
+    return render_template("index_html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)

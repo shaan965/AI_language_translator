@@ -1,11 +1,11 @@
 """Translate from English to French or from French to English using IBM Watson API."""
 
 import os
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import LanguageTranslatorV3
 
-#load_dotenv()
+load_dotenv()
 
 apikey = os.environ['apikey']
 url = os.environ['url']
